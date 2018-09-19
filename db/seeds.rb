@@ -9,7 +9,8 @@
 
 shop = Shop.create([
     { name:'My Shop'},
-    { name:'My Shop 2'}
+    { name:'My Shop 2'},
+
 ])
 
 products = Product.create([
@@ -19,6 +20,8 @@ products = Product.create([
     { name: 'Goat Milk', price: 1.99, shop_id: 2, quantity: 1},
 ])
 
+# TODO 
+#     Drop 
 orders = Order.create([
     { name: 'Balls', quantity: 2, shop_id: 2 , price: 2.99 },
     { name: 'Bats', quantity: 4, shop_id: 1 , price: 2.99 },
@@ -26,7 +29,11 @@ orders = Order.create([
     { name: 'Gloves', quantity: 210, shop_id: 2 , price: 2.99 }
 ])
 
-line_items = Line_items.create([
-    { name: 'Balls', quantity: 2, product_id: 2 , order_id: 2, price: 2.99 },
-    { name: 'Bats', quantity: 4, product_id: 1 , order_id: 2, price: 2.99 }
+lineitems = LineItem.create([
+    { name: 'Balls', quantity: 2, product_id: 1 , order_id: 1, price: 2.99 },
+    { name: 'Shoes', quantity: 4, product_id: 1 , order_id: 1, price: 2.99 },
+    { name: 'Chair', quantity: 2, product_id: 2 , order_id: 2, price: 2.99 },
+    { name: 'Fans', quantity: 4, product_id: 3 , order_id: 3, price: 2.99 },
+    { name: 'Carpets', quantity: 2, product_id: 4 , order_id: 3, price: 2.99 },
+    { name: 'Beds', quantity: 4, product_id: 4 , order_id: 4, price: 2.99 }
 ])

@@ -41,11 +41,10 @@ class Api::V1::OrdersController < ApplicationController
   # CUSTOM METHODS
 
   def line_items_of_this
-    @order = Order.find(params[:order_id])
-    # puts "--->" + params.inspect
-
-    render json: @order.line_items
+    @lineitems = LineItem.find_by(order_id: params[:order_id])
+    render json: @lineitems
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

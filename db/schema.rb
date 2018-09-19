@@ -16,36 +16,32 @@ ActiveRecord::Schema.define(version: 2018_09_18_122157) do
     t.string "name"
     t.integer "quantity"
     t.decimal "price"
-    t.integer "product_id"
-    t.integer "order_id"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "product_id"
+    t.integer "order_id"
   end
 
   create_table "orders", force: :cascade do |t|
     t.string "name"
     t.integer "quantity"
-    t.integer "shop_id"
-    t.decimal "price"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "shop_id"
+    t.decimal "price"
   end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.decimal "price"
-    t.integer "shop_id"
-    t.integer "quantity"
-    
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "shop_id"
+    t.integer "quantity"
   end
 
   create_table "shops", force: :cascade do |t|
     t.string "name"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
